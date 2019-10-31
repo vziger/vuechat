@@ -1,5 +1,5 @@
 ### Запуск
-1. открыть index.html
+1. открыть public/index.html
 2. ввести ник
 3. нажать «Go flooding»
 
