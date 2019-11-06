@@ -38,6 +38,7 @@
   <script>
     function getAction() {
       if(document.getElementById('nickname').value.trim().length > 0){
+        document.getElementById('nickname').value = document.getElementById('nickname').value.trim()
         document.getElementById('auth').action = "chat.html"
       } else {
         console.log('wrong name')
