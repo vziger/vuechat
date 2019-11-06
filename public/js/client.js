@@ -2,7 +2,7 @@ if ("WebSocket" in window) {
   const DEFAULT_NAME = 'няшный пупсик'
   const TIME_LIMIT = 200
   const param = window.location.search.toString()
-  const name = (param.indexOf('=') > 0) ? param.split('=')[1].replace('+', ' ') : DEFAULT_NAME
+  const name = (param.indexOf('=') > 0) ? param.split('=')[1].replace('+', '') : DEFAULT_NAME
   const ssocket = new WebSocket(`ws://pm.tada.team/ws?name=${name}`)
 
 Vue.component('chat-message', {
@@ -148,7 +148,7 @@ new Vue({
   computed: {
     myName() {
       const param = window.location.search.toString()
-      const str = (param.indexOf('=') > 0) ? param.split('=')[1].replace('+', ' ') : DEFAULT_NAME
+      const str = (param.indexOf('=') > 0) ? param.split('=')[1].replace('+', '') : DEFAULT_NAME
       return decodeURIComponent(str)
     }
   },
